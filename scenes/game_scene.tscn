@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cm5epkik6y5hh" path="res://tilemap.png" id="1_onqr8"]
 [ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://scenes/player.tscn" id="1_w5aja"]
+[ext_resource type="Script" uid="uid://3eoo2li2pyij" path="res://scripts/camera.gd" id="3_ycayy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ycayy"]
 texture = ExtResource("1_onqr8")
@@ -26,5 +27,7 @@ tile_set = SubResource("TileSet_o813u")
 position = Vector2(45, -2)
 scale = Vector2(0.1, 0.1)
 
-[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=2009980100]
+[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=2009980100 node_paths=PackedStringArray("target")]
 zoom = Vector2(10, 10)
+script = ExtResource("3_ycayy")
+target = NodePath("../Player")
