@@ -1,4 +1,3 @@
-class_name IsometricPlayer
 extends CharacterBody2D
 
 @export var max_speed: float = 500.0

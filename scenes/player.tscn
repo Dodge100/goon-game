@@ -8,9 +8,6 @@ size = Vector2(128.5, 128)
 
 [node name="Player" type="CharacterBody2D" unique_id=682208395]
 script = ExtResource("1_g2els")
-max_lean_angle = 0.5
-lean_lerp_speed = 35.0
-turn_squash_intensity = 1.55
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=101980504]
 texture = ExtResource("1_3vyb7")
