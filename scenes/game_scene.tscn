@@ -1,10 +1,30 @@
-[gd_scene format=3 uid="uid://ocdpd482iv1r"]
+[gd_scene format=4 uid="uid://ocdpd482iv1r"]
 
+[ext_resource type="Texture2D" uid="uid://cm5epkik6y5hh" path="res://tilemap.png" id="1_onqr8"]
 [ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://scenes/player.tscn" id="1_w5aja"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ycayy"]
+texture = ExtResource("1_onqr8")
+texture_region_size = Vector2i(24, 12)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_o813u"]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(24, 12)
+sources/2 = SubResource("TileSetAtlasSource_ycayy")
 
 [node name="GameScene" type="Node" unique_id=2043002057]
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1383946735]
 
-[node name="Player" parent="." unique_id=682208395 instance=ExtResource("1_w5aja")]
-position = Vector2(734, 266)
+[node name="TileMapLayer" type="TileMapLayer" parent="Node2D" unique_id=54833900]
+tile_map_data = PackedByteArray("AAADAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAEAAUAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAAMAAAAAAAAAAAAAAAAAAgAAAAAAAAABAAAAAgAAAAAAAAABAAEAAgAAAAAAAAACAAEAAgAAAAAAAAACAAAAAgAAAAAAAAACAP//AgAAAAAAAAACAP7/AgAAAAAAAAABAP7/AgAAAAAAAAAAAP7/AgAAAAAAAAD///7/AgAAAAAAAAD/////AgAAAAAAAAD+////AgAAAAAAAAD+/wAAAgAAAAAAAAD+/wEAAgAAAAAAAAD//wEAAgAAAAAAAAD//wIAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAEAAgAAAAAAAAABAP//AgAAAAAAAAAAAP//AgAAAAAAAAD//wAAAgAAAAAAAAABAAIAAgAAAAAAAAACAAIAAgAAAAAAAAADAAAAAgAAAAAAAAADAP//AgAAAAAAAAADAP7/AgAAAAAAAAADAAEAAgAAAAAAAAAEAAEAAgAAAAAAAAAEAAAAAgAAAAAAAAAEAP//AgAAAAAAAAAEAP7/AgAAAAAAAAACAP3/AgAAAAAAAAABAP3/AgAAAAAAAAAAAP3/AgAAAAAAAAD///3/AgAAAAAAAAD+//7/AgAAAAAAAAD9//7/AgAAAAAAAAD9////AgAAAAAAAAD9/wAAAgAAAAAAAAD+/wIAAgAAAAAAAAD//wMAAgAAAAAAAAAAAAMAAgAAAAAAAAD9/wEAAgAAAAAAAAD9/wIAAgAAAAAAAAA=")
+tile_set = SubResource("TileSet_o813u")
+
+[node name="Player" parent="Node2D" unique_id=682208395 instance=ExtResource("1_w5aja")]
+position = Vector2(45, -2)
+scale = Vector2(0.1, 0.1)
+
+[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=2009980100]
+zoom = Vector2(10, 10)
