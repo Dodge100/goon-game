@@ -26,10 +26,16 @@ func _process(delta: float) -> void:
 
 
 func spawn_attack(direction: Vector2) -> bool:
-	_can_attack = false
-	_cooldown_timer.start(5)
+	if not _can_attack:
+		return false
+	if attack == null:
+		return false
+	var player := get_parent() as Node2D
+	if player == null:
+		return false
 
-	var player = get_parent() as Node2D
+	_can_attack = false
+	_cooldown_timer.start(0.5)
 	attack.execute(player, direction)
 
 	return true
