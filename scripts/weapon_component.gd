@@ -21,12 +21,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	attack.update(self, delta)
 
-
-func _input(event):
-	if event is InputEventKey:
-		if event.keycode == KEY_SPACE and event.pressed and not event.is_echo():
-			var direction = get_local_mouse_position()
-			spawn_attack(direction)
+	if Input.is_action_just_pressed("attack"):
+		spawn_attack(get_local_mouse_position())
 
 
 func spawn_attack(direction: Vector2) -> bool:
