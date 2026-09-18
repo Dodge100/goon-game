@@ -1,8 +1,9 @@
 [gd_scene format=4 uid="uid://ocdpd482iv1r"]
 
 [ext_resource type="Texture2D" uid="uid://cm5epkik6y5hh" path="res://tilemap.png" id="1_onqr8"]
-[ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://scenes/player.tscn" id="1_w5aja"]
+[ext_resource type="PackedScene" uid="uid://cohiqpndtgam" path="res://scenes/player.tscn" id="1_w5aja"]
 [ext_resource type="Script" uid="uid://3eoo2li2pyij" path="res://scripts/camera.gd" id="3_ycayy"]
+[ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://scenes/enemy.tscn" id="4_bw6k5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ycayy"]
 texture = ExtResource("1_onqr8")
@@ -23,10 +24,13 @@ sources/2 = SubResource("TileSetAtlasSource_ycayy")
 tile_map_data = PackedByteArray("AAADAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAEAAUAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAAMAAAAAAAAAAAAAAAAAAgAAAAAAAAABAAAAAgAAAAAAAAABAAEAAgAAAAAAAAACAAEAAgAAAAAAAAACAAAAAgAAAAAAAAACAP//AgAAAAAAAAACAP7/AgAAAAAAAAABAP7/AgAAAAAAAAAAAP7/AgAAAAAAAAD///7/AgAAAAAAAAD/////AgAAAAAAAAD+////AgAAAAAAAAD+/wAAAgAAAAAAAAD+/wEAAgAAAAAAAAD//wEAAgAAAAAAAAD//wIAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAEAAgAAAAAAAAABAP//AgAAAAAAAAAAAP//AgAAAAAAAAD//wAAAgAAAAAAAAABAAIAAgAAAAAAAAACAAIAAgAAAAAAAAADAAAAAgAAAAAAAAADAP//AgAAAAAAAAADAP7/AgAAAAAAAAADAAEAAgAAAAAAAAAEAAEAAgAAAAAAAAAEAAAAAgAAAAAAAAAEAP//AgAAAAAAAAAEAP7/AgAAAAAAAAACAP3/AgAAAAAAAAABAP3/AgAAAAAAAAAAAP3/AgAAAAAAAAD///3/AgAAAAAAAAD+//7/AgAAAAAAAAD9//7/AgAAAAAAAAD9////AgAAAAAAAAD9/wAAAgAAAAAAAAD+/wIAAgAAAAAAAAD//wMAAgAAAAAAAAAAAAMAAgAAAAAAAAD9/wEAAgAAAAAAAAD9/wIAAgAAAAAAAAA=")
 tile_set = SubResource("TileSet_o813u")
 
-[node name="Player" parent="Node2D" unique_id=682208395 instance=ExtResource("1_w5aja")]
-position = Vector2(45, -2)
-
-[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=2009980100 node_paths=PackedStringArray("target")]
+[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=2009980100]
 zoom = Vector2(10, 10)
 script = ExtResource("3_ycayy")
-target = NodePath("../Player")
+
+[node name="Player" parent="Node2D" unique_id=682208395 instance=ExtResource("1_w5aja")]
+position = Vector2(17, -20)
+
+[node name="Enemy" parent="Node2D" unique_id=228428780 node_paths=PackedStringArray("player") instance=ExtResource("4_bw6k5")]
+position = Vector2(45, 8)
+player = NodePath("../Player")

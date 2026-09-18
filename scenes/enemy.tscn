@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://be8qbmt0fe144"]
+
+[ext_resource type="Script" uid="uid://dqeg4xxytcyd3" path="res://scripts/enemy.gd" id="1_md0e3"]
+[ext_resource type="Texture2D" uid="uid://d1und21mfdl1p" path="res://assets/slime.tres" id="2_g2els"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fwbqy"]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=682208395]
+script = ExtResource("1_md0e3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=101980504]
+texture = ExtResource("2_g2els")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=614638490]
+shape = SubResource("CircleShape2D_fwbqy")
