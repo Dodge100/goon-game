@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dymxf0txidqa8" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Script" uid="uid://cnhglsdo2n05h" path="res://scripts/weapon_component.gd" id="3_qhqgy"]
 [ext_resource type="Script" uid="uid://dglmgx1worahd" path="res://scripts/weapons/sword.gd" id="4_dqkch"]
-[ext_resource type="Texture2D" uid="uid://k0a3qw5hd23j" path="res://assets/scythe.png" id="5_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://bpojm6qiqfkri" path="res://assets/sword.tres" id="5_qlg0r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o813u"]
 size = Vector2(12, 12)
