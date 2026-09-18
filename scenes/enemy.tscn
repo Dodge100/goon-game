@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dqeg4xxytcyd3" path="res://scripts/enemy.gd" id="1_md0e3"]
 [ext_resource type="Texture2D" uid="uid://d1und21mfdl1p" path="res://assets/slime.tres" id="2_g2els"]
+[ext_resource type="Script" uid="uid://dpfdvgmt0w3ir" path="res://scripts/health_component.gd" id="3_4ra3w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fwbqy"]
 
@@ -13,3 +14,8 @@ texture = ExtResource("2_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=614638490]
 shape = SubResource("CircleShape2D_fwbqy")
+
+[node name="HealthComponent" type="Node" parent="." unique_id=665345892]
+script = ExtResource("3_4ra3w")
+
+[connection signal="died" from="HealthComponent" to="." method="_on_health_component_died"]
