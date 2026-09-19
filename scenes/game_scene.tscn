@@ -1,27 +1,30 @@
 [gd_scene format=4 uid="uid://ocdpd482iv1r"]
 
-[ext_resource type="Texture2D" uid="uid://cm5epkik6y5hh" path="res://tilemap.png" id="1_onqr8"]
+[ext_resource type="Texture2D" uid="uid://byor2v6m88mf5" path="res://assets/spritesheet.png" id="1_bw6k5"]
 [ext_resource type="PackedScene" uid="uid://cohiqpndtgam" path="res://scenes/player.tscn" id="1_w5aja"]
 [ext_resource type="Script" uid="uid://3eoo2li2pyij" path="res://scripts/camera.gd" id="3_ycayy"]
 [ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://scenes/enemy.tscn" id="4_bw6k5"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ycayy"]
-texture = ExtResource("1_onqr8")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y3j0m"]
+texture = ExtResource("1_bw6k5")
+margins = Vector2i(104, 0)
 texture_region_size = Vector2i(24, 12)
 0:0/0 = 0
+1:0/0 = 0
+3:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_o813u"]
 tile_shape = 1
 tile_layout = 5
 tile_size = Vector2i(24, 12)
-sources/2 = SubResource("TileSetAtlasSource_ycayy")
+sources/0 = SubResource("TileSetAtlasSource_y3j0m")
 
 [node name="GameScene" type="Node" unique_id=2043002057]
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1383946735]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Node2D" unique_id=54833900]
-tile_map_data = PackedByteArray("AAADAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAEAAUAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAAMAAAAAAAAAAAAAAAAAAgAAAAAAAAABAAAAAgAAAAAAAAABAAEAAgAAAAAAAAACAAEAAgAAAAAAAAACAAAAAgAAAAAAAAACAP//AgAAAAAAAAACAP7/AgAAAAAAAAABAP7/AgAAAAAAAAAAAP7/AgAAAAAAAAD///7/AgAAAAAAAAD/////AgAAAAAAAAD+////AgAAAAAAAAD+/wAAAgAAAAAAAAD+/wEAAgAAAAAAAAD//wEAAgAAAAAAAAD//wIAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAEAAgAAAAAAAAABAP//AgAAAAAAAAAAAP//AgAAAAAAAAD//wAAAgAAAAAAAAABAAIAAgAAAAAAAAACAAIAAgAAAAAAAAADAAAAAgAAAAAAAAADAP//AgAAAAAAAAADAP7/AgAAAAAAAAADAAEAAgAAAAAAAAAEAAEAAgAAAAAAAAAEAAAAAgAAAAAAAAAEAP//AgAAAAAAAAAEAP7/AgAAAAAAAAACAP3/AgAAAAAAAAABAP3/AgAAAAAAAAAAAP3/AgAAAAAAAAD///3/AgAAAAAAAAD+//7/AgAAAAAAAAD9//7/AgAAAAAAAAD9////AgAAAAAAAAD9/wAAAgAAAAAAAAD+/wIAAgAAAAAAAAD//wMAAgAAAAAAAAAAAAMAAgAAAAAAAAD9/wEAAgAAAAAAAAD9/wIAAgAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAABAP7/AgAAAAAAAAD+/wIAAAABAAAAAAD//wIAAAAAAAAAAAD//wEAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD+/wAAAAABAAAAAAD+/wEAAAABAAAAAAD9/wEAAAABAAAAAAD9/wIAAAABAAAAAAD9/wAAAAABAAAAAAD9/wMAAAABAAAAAAD+/wMAAAABAAAAAAD//wMAAAABAAAAAAD//wQAAAABAAAAAAAAAAQAAAABAAAAAAABAAEAAAABAAAAAAACAAEAAAABAAAAAAACAAAAAAABAAAAAAACAP//AAABAAAAAAABAP//AAABAAAAAAAAAP//AAABAAAAAAABAAMAAAABAAAAAAAAAAMAAAABAAAAAAAAAAIAAAABAAAAAAA=")
 tile_set = SubResource("TileSet_o813u")
 
 [node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=2009980100]
