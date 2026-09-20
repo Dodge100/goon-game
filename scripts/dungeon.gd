@@ -9,7 +9,7 @@ func _ready() -> void:
 	for map in maps.size():
 		print(map, ": ", maps[map].get_used_cells())
 	return
-
+# test commit sdfsdf
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
