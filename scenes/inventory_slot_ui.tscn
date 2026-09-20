@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://diyele7c7xfls"]
+
+[ext_resource type="Script" path="res://scripts/inventory/inventory_slot_ui.gd" id="1_slot"]
+
+[node name="InventorySlotUI" type="PanelContainer" unique_id=119057587]
+custom_minimum_size = Vector2(56, 56)
+script = ExtResource("1_slot")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1292524322]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Stack" type="Control" parent="Margin" unique_id=167604707]
+clip_contents = true
+layout_mode = 2
+
+[node name="IconRect" type="TextureRect" parent="Margin/Stack" unique_id=1108658222]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CountLabel" type="Label" parent="Margin/Stack" unique_id=1656958782]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -28.0
+offset_top = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+visible = false
