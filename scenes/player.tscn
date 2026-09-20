@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bpojm6qiqfkri" path="res://assets/sword.tres" id="5_qlg0r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o813u"]
-size = Vector2(12, 12)
+size = Vector2(24, 24)
 
 [sub_resource type="Resource" id="Resource_qhqgy"]
 script = ExtResource("4_dqkch")
