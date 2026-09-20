@@ -27,9 +27,10 @@ sources/0 = SubResource("TileSetAtlasSource_y3j0m")
 tile_map_data = PackedByteArray("AAD+/wIAAAABAAAAAAD//wIAAAAAAAAAAAD//wEAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAAAD+////AAAAAAAAAAD+/wAAAAABAAAAAAD+/wEAAAABAAAAAAD9/wEAAAABAAAAAAD9/wIAAAABAAAAAAD9/wAAAAABAAAAAAD9/wMAAAABAAAAAAD+/wMAAAABAAAAAAD//wMAAAABAAAAAAD//wQAAAABAAAAAAAAAAQAAAABAAAAAAABAAEAAAABAAAAAAACAAEAAAABAAAAAAACAAAAAAABAAAAAAACAP//AAABAAAAAAABAP//AAABAAAAAAAAAP//AAABAAAAAAABAAMAAAABAAAAAAAAAAMAAAABAAAAAAAAAAIAAAABAAAAAAA=")
 tile_set = SubResource("TileSet_o813u")
 
-[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=2009980100]
+[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=2009980100 node_paths=PackedStringArray("target")]
 zoom = Vector2(5, 5)
 script = ExtResource("3_ycayy")
+target = NodePath("../Player")
 
 [node name="Player" parent="Node2D" unique_id=682208395 instance=ExtResource("1_w5aja")]
 position = Vector2(17, -20)
