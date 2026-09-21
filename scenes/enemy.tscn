@@ -13,6 +13,7 @@ script = ExtResource("1_md0e3")
 texture = ExtResource("2_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=614638490]
+position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_fwbqy")
 
 [node name="HealthComponent" type="Node" parent="." unique_id=665345892]
